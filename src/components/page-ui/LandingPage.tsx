@@ -7,13 +7,11 @@ import { Button } from '@/components/ui/button';
 import { TypewriterEffectSmooth } from '@/components/ui/typewriter-effect';
 
 import canvasDots from './heroCanvas.js';
-import canvasDotsBg from './bgCanvas.js';
-if (typeof window !== 'undefined') {
-    window.onload = function () {
-      canvasDotsBg();
+// import canvasDotsBg from './bgCanvas.js';
+
+     // canvasDotsBg();
       canvasDots();
-    };
-  }
+
 const words = [
     {
         text: 'Hey,'
@@ -60,7 +58,7 @@ export function LandingPage() {
                 <TypewriterEffectSmooth words={words} />
                 {isDelayed && <TypewriterEffectSmooth words={words1} />}
                 <div className="relative z-10 text-center flex-col space-y-4 md:flex-row md:space-x-4">
-                    <Link href="https://drive.google.com/file/d/1xHPigW5eJQSCCgx3VBFyH5E0y_wwOdDN/view?usp=sharing">
+                    <Link href="https://drive.google.com/file/d/1oG1p4-PWppW2A8y9oNT03f0P1qaf-Ogv/view?usp=sharing">
                         <Button>Download CV</Button>
                     </Link>
                     <Link href="#contact-me">
