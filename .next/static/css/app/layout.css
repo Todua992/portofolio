@@ -1115,6 +1115,15 @@ video {
   width: -moz-max-content;
   width: max-content;
 }
+.w-\[80rem\] {
+  width: 80rem;
+}
+.w-\[2000rem\] {
+  width: 2000rem;
+}
+.w-\[200rem\] {
+  width: 200rem;
+}
 .min-w-\[8rem\] {
   min-width: 8rem;
 }
@@ -1130,11 +1139,23 @@ video {
 .max-w-\[10rem\] {
   max-width: 10rem;
 }
+.max-w-\[1920px\] {
+  max-width: 1920px;
+}
 .max-w-full {
   max-width: 100%;
 }
 .max-w-xl {
   max-width: 36rem;
+}
+.max-w-\[1080px\] {
+  max-width: 1080px;
+}
+.max-w-1 {
+  max-width: 0.25rem;
+}
+.max-w-10 {
+  max-width: 2.5rem;
 }
 .shrink-0 {
   flex-shrink: 0;
@@ -1237,6 +1258,21 @@ video {
   margin-top: calc(2rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(2rem * var(--tw-space-y-reverse));
 }
+.space-x-5 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(1.25rem * var(--tw-space-x-reverse));
+  margin-left: calc(1.25rem * calc(1 - var(--tw-space-x-reverse)));
+}
+.space-x-60 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(15rem * var(--tw-space-x-reverse));
+  margin-left: calc(15rem * calc(1 - var(--tw-space-x-reverse)));
+}
+.space-x-8 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(2rem * var(--tw-space-x-reverse));
+  margin-left: calc(2rem * calc(1 - var(--tw-space-x-reverse)));
+}
 .space-x-reverse > :not([hidden]) ~ :not([hidden]) {
   --tw-space-x-reverse: 1;
 }
@@ -1245,6 +1281,9 @@ video {
 }
 .overflow-hidden {
   overflow: hidden;
+}
+.overflow-visible {
+  overflow: visible;
 }
 .whitespace-nowrap {
   white-space: nowrap;
@@ -1436,6 +1475,14 @@ video {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
 }
+.px-20 {
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+.px-1 {
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+}
 .pb-10 {
   padding-bottom: 2.5rem;
 }
@@ -1462,6 +1509,15 @@ video {
 }
 .pt-80 {
   padding-top: 20rem;
+}
+.pb-20 {
+  padding-bottom: 5rem;
+}
+.pb-40 {
+  padding-bottom: 10rem;
+}
+.pb-1 {
+  padding-bottom: 0.25rem;
 }
 .text-center {
   text-align: center;
@@ -2026,6 +2082,11 @@ html {
   .md\:py-40 {
     padding-top: 10rem;
     padding-bottom: 10rem;
+  }
+
+  .md\:py-10 {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
   }
 
   .md\:pt-32 {
