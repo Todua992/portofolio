@@ -5,7 +5,7 @@ import React from "react";
 
 export function AboutMeSection() {
     return (
-        <section
+        <section id = "aboutme"
             style={{
                 maxWidth: '1280px',
                 margin: '0 auto',
