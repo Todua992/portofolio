@@ -1,6 +1,5 @@
 'use client';
 import { motion, MotionValue, useScroll, useSpring, useTransform } from 'framer-motion';
-import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 
@@ -115,9 +114,9 @@ export const ProductCard = ({
             </motion.div>
         );
     }
-
+//
     return (
-        <motion.div
+        <motion.div 
             whileHover={{
                 y: -20
             }}
