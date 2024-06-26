@@ -11,24 +11,24 @@ import { ThemeProvider } from '@/components/ui/theme-provider';
 const spaceGrotesk = Space_Grotesk({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-    metadataBase: new URL('https://safetpojskic.com'),
+    metadataBase: new URL('https://todua.tech'),
     title: 'Luka Gotsiridze',
     description: 'Welcome to my portfolio!',
     applicationName: 'Luka Gotsiridze',
-    keywords: ['Luka Gotsiridze','student', 'portfolio', 'personal', 'website', 'developer', 'designer', 'engineer', 'software', 'engineer', 'student',],
+    keywords: ['Luka','Gotsiridze','student', 'portfolio', 'personal', 'website', 'developer', 'designer', 'engineer', 'software', 'engineer', 'student',],
     openGraph: {
         siteName: 'Luka Gotsiridze',
         title: 'Luka Gotsiridze',
         description: 'Welcome to my personal portfolio!',
         type: 'website',
-        images: ['/opengraph-image.png']
+        images: ['/images/portofolio.png']
     },
     twitter: {
         card: 'summary_large_image',
-        site: '@safetpojskic',
+        site: '@todua',
         title: 'Luka Gotsiridze',
         description: 'Welcome to my personal portfolio!',
-        images: ['/opengraph-image.png']
+        images: ['/images/portofolio.png']
     },
     icons: [
         {
