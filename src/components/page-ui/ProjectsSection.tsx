@@ -10,33 +10,33 @@ const products = [
     {
         title: 'Enablment',
         link: '',
-        thumbnail: '/projects/enablment.png'
+        thumbnail: '/images/enablment.png'
         
     },
     {
         title: 'LBDP',
         link: 'https://secureid.dk/',
-        thumbnail: '/projects/lbdp.mp4'
+        thumbnail: '/images/lbdp.mp4'
     },
     {
         title: 'Portfolio',
         link: 'https://secureid.dk/',
-        thumbnail: '/projects/portofolio.mp4'
+        thumbnail: '/images/portofolio.mp4'
     },
 
     {
         title: 'VR vs PC',
         link: 'https://secureid.dk/',
-        thumbnail: '/projects/vrvspc.png'
+        thumbnail: '/images/vrvspc.png'
     },
     {
         title: 'CEO & CO-founder of SecureID ',
         link: 'https://secureid.dk/',
-        thumbnail: '/projects/secureid.mp4'
+        thumbnail: '/images/secureid.mp4'
     },
     {
         title: 'Programming Language Numatix',
         link: 'https://secureid.dk/',
-        thumbnail: '/projects/numatix.png'
+        thumbnail: '/images/numatix.png'
     }
 ];

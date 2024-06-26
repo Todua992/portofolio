@@ -9,8 +9,8 @@ import { TypewriterEffectSmooth } from '@/components/ui/typewriter-effect';
 import canvasDots from './heroCanvas.js';
 // import canvasDotsBg from './bgCanvas.js';
 
-     // canvasDotsBg();
-      canvasDots();
+// canvasDotsBg();
+canvasDots();
 
 const words = [
     {
@@ -28,7 +28,7 @@ const words = [
 const words1 = [
     {
         text: 'A Software Engineer'
-    }, 
+    },
     {
         text: 'Student',
         className: 'text-red-500 dark:text-red-500'
@@ -58,7 +58,7 @@ export function LandingPage() {
                 <TypewriterEffectSmooth words={words} />
                 {isDelayed && <TypewriterEffectSmooth words={words1} />}
                 <div className="relative z-10 text-center flex-col space-y-4 md:flex-row md:space-x-4">
-                    <Link href="https://drive.google.com/file/d/1oG1p4-PWppW2A8y9oNT03f0P1qaf-Ogv/view?usp=sharing">
+                    <Link href="https://drive.google.com/file/d/1oG1p4-PWppW2A8y9oNT03f0P1qaf-Ogv/view?usp=sharing" target="_blank">
                         <Button>Download CV</Button>
                     </Link>
                     <Link href="#contact-me">
@@ -68,5 +68,5 @@ export function LandingPage() {
             </div>
         </div>
     );
-      
+
 }      

@@ -1,4 +1,7 @@
 const canvasDots = function () {
+  if(typeof document === 'undefined'){
+    return;
+  }
   const canvas = document.querySelector('canvas'),
     ctx = canvas.getContext('2d'),
     colorDot = [
@@ -29,7 +32,7 @@ const canvasDots = function () {
 
   if (windowSize > 1600) {
     dots = {
-      nb: 600, // number of particles
+      nb: 1000, // number of particles
       distance: 70, // max distance between particles for them to link
       d_radius: 300, // radius from mouse location that particles will link
       array: [],

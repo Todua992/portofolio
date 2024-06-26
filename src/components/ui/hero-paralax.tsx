@@ -1,6 +1,5 @@
 'use client';
 import { motion, MotionValue, useScroll, useSpring, useTransform } from 'framer-motion';
-import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 
@@ -138,7 +137,7 @@ export const ProductCard = ({
             className="group/product relative h-96 w-[40rem] shrink-0"
         >
             <Link href={product.link} className="block group-hover/product:shadow-2xl">
-                <Image
+                <img
                     src={product.thumbnail}
                     height="600"
                     width="600"
