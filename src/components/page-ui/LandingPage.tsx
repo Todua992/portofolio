@@ -54,6 +54,7 @@ export function LandingPage() {
             <div className="canvas absolute inset-0">
                 <canvas className="canvas-2 w-full h-full"></canvas>
             </div>
+            <img src="/images/portofolio.png" alt="Preview" style={{ display: 'none' }} />
             <div className="relative z-10 text-center">
                 <TypewriterEffectSmooth words={words} />
                 {isDelayed && <TypewriterEffectSmooth words={words1} />}
