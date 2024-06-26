@@ -64,7 +64,7 @@ export function AboutMeSection() {
                     }}
                 >
                     <img
-                        src='/projects/me.png' // Replace with your actual image path
+                        src='/images/me.png' // Replace with your actual image path
                         alt="About Me"
                         style={{
                             maxWidth: '100%',
