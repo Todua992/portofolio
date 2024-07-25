@@ -19,15 +19,23 @@ jobs:
       uses: actions/setup-node@v2
       with:
         node-version: '18'
-    - name: 📂 Sync files
-      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
-      with:
-        server: ${{ secrets.FTP_SERVER }}
-        username: ${{ secrets.FTP_USERNAME}}
-        password: ${{ secrets.FTP_PASSWORD }}
-        protocol: ${{ secrets.FTP_PROTOCOL }}
-        exclude: |
-           **/node_modules/**
-           **/.next/**
-           **/next/**
-           **/.git/**
+
+    - name: 🔍 Check if secrets match known values
+      run: |
+        if [[ "${{ secrets.FTP_SERVER }}" == "ftp.todua.tech" ]]; then
+          echo "FTP_SERVER matches the expected value";
+        else
+          echo "FTP_SERVER does not match the expected value";
+        fi
+        
+        if [[ "${{ secrets.FTP_USERNAME }}" == "expected_username" ]]; then
+          echo "FTP_USERNAME matches the expected value";
+        else
+          echo "FTP_USERNAME does not match the expected value";
+        fi
+        
+        if [[ "${{ secrets.FTP_PASSWORD }}" == "expected_password" ]]; then
+          echo "FTP_PASSWORD matches the expected value";
+        else
+          echo "FTP_PASSWORD does not match the expected value";
+        fi
