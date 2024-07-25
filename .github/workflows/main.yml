@@ -22,13 +22,13 @@ jobs:
 
     - name: 🔍 Check if secrets match known values
       run: |
-        if [[ "${{ secrets.FTP_SERVER }}" == "ftp.todua.tech" ]]; then
+        if [[ "${{ secrets.FTP_PROTOCOL }}" == "ftps" ]]; then
           echo "FTP_SERVER matches the expected value";
         else
           echo "FTP_SERVER does not match the expected value";
         fi
         
-        if [[ "${{ secrets.FTP_USERNAME }}" == "github@todua.tech" ]]; then
+        if [[ "${{ secrets.FTP_USERNAME }}" == "expected_username" ]]; then
           echo "FTP_USERNAME matches the expected value";
         else
           echo "FTP_USERNAME does not match the expected value";
