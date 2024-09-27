@@ -32,7 +32,7 @@ const experience = [
             <ul className="list-disc">
                 <li>Developed a fully self-driving car simulation using Unity and C#</li>
                 <li>
-                 Utilized an unconventional approach to visualize the learning process in Unity, highlighting the project's innovative nature. This experience demonstrated the importance of persistence and creative problem-solving.
+                 Utilized an unconventional approach to visualize the learning process in Unity, highlighting the project&#39;s innovative nature. This experience demonstrated the importance of persistence and creative problem-solving.
                 </li>
             </ul>
         ),

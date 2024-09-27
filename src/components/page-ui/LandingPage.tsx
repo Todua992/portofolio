@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 import { Button } from '@/components/ui/button';
 import { TypewriterEffectSmooth } from '@/components/ui/typewriter-effect';
@@ -54,8 +55,15 @@ export function LandingPage() {
             <div className="canvas absolute inset-0">
                 <canvas className="canvas-2 w-full h-full"></canvas>
             </div>
-            <img src="/images/portofolio.png" alt="Preview" style={{ display: 'none' }} />
-            <div className="relative z-10 text-center">
+            <div style={{ display: 'none' }}>
+  <Image 
+    src="/images/portofolio.png" 
+    alt="Preview"
+    width={500}  // Set appropriate width
+    height={300} // Set appropriate height
+    layout="responsive" // Makes the image responsive
+  />
+</div>            <div className="relative z-10 text-center">
                 <TypewriterEffectSmooth words={words} />
                 {isDelayed && <TypewriterEffectSmooth words={words1} />}
                 <div className="relative z-10 text-center flex-col space-y-4 md:flex-row md:space-x-4">
