@@ -2,3 +2,4 @@ node_modules
 .next
 .next/cache/webpack/client-development/1.pack.gz
 .next/trace
+
