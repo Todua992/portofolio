@@ -5,6 +5,8 @@ import { ProjectsSection } from '@/components/page-ui/ProjectsSection';
 import { SkillsSection } from '@/components/page-ui/SkillsSection';
 import { AboutMeSection } from '@/components/page-ui/AboutMeSection';
 
+export const runtime = "edge";
+
 export default function Home() {
     return (
         <main>

@@ -1,5 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-
+export const runtime = "edge";
+ 
 type Data = {
     success: boolean;
     message?: string;
