@@ -8,7 +8,8 @@ import { Button } from '@/components/ui/button';
 import { TypewriterEffectSmooth } from '@/components/ui/typewriter-effect';
 
 import canvasDots from './heroCanvas.js';
-canvasDots();
+
+
 
 const words = [
     {
@@ -32,8 +33,18 @@ const words1 = [
         className: 'text-red-500 dark:text-red-500'
     }
 ];
+const checkForCanvas = setInterval(() => {
+    const canvas = document.querySelector('canvas');
+    if(canvas) {
+        canvasDots();
+      console.log("Canvas found:", canvas);
+      // Perform operations with the canvas here
+      clearInterval(checkForCanvas); // Stop checking once the canvas is found
+    }
+  }, 100);
 
 export function LandingPage() {
+    
     const [isDelayed, setIsDelayed] = useState<boolean>(false);
 
     useEffect(() => {

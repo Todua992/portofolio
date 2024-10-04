@@ -3,7 +3,7 @@ const canvasDots = function () {
     return;
   }
   const canvas = document.querySelector('canvas'),
-    ctx = canvas.getContext('2d'),
+  ctx = canvas.getContext('2d'),
     colorDot = [
       'rgb(255, 1, 1)',
       'rgb(255, 1, 1)',
