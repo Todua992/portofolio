@@ -2,8 +2,17 @@ const canvasDots = function () {
   if(typeof document === 'undefined'){
     return;
   }
-  const canvas = document.querySelector('canvas'),
-    ctx = canvas.getContext('2d'),
+ // Query the canvas element and ensure it exists
+ const canvas = document.querySelector('canvas');
+ if (!canvas) {
+   console.error("No canvas element found in the document.");
+   return; // Exit the function if no canvas is found
+ } 
+ const ctx = canvas.getContext('2d');
+ if (!ctx) {
+   console.error("Failed to get 2D context of the canvas.");
+   return; // Exit if getting the context fails
+ }
     colorDot = [
       'rgb(255, 1, 1)',
       'rgb(255, 1, 1)',

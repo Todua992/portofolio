@@ -123,6 +123,8 @@ export const TypewriterEffectSmooth = ({
                     ease: 'linear',
                     delay: 1
                 }}
+                viewport={{ once: true }} 
+
             >
                 <div
                     className="lg:text:3xl text-xl font-bold xl:text-5xl"

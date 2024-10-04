@@ -7,92 +7,56 @@ export function AboutMeSection() {
   return (
     <section
       id="aboutme"
-      style={{
-        maxWidth: "1280px",
-        margin: "0 auto",
-        padding: "80px 32px",
-        height: "100vh",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-      }}>
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "row",
-          justifyContent: "space-between",
-          alignItems: "center",
-          width: "100%",
-          maxWidth: "960px", // Adjust max width as needed
-        }}>
-        <div
-          style={{
-            flex: "1",
-            textAlign: "left",
-            paddingRight: "32px", // Space between text and image
-          }}>
-          <p>
-            <br />{" "}
-          </p>
-
-          <h1 style={{ fontSize: "36px", fontWeight: "bold" }}>About Me</h1>
-          <p style={{ fontSize: "18px" }}>
+      className="max-w-[1280px] mx-auto py-20 px-8 h-screen flex justify-center items-center"
+    >
+      <div className="flex flex-col lg:flex-row justify-between items-center w-full max-w-[960px]">
+        {/* Left Text Section */}
+        <div className="flex-1 text-left lg:pr-8 pb-8 lg:pb-0">
+          <h1 className="text-4xl lg:text-5xl font-bold mb-4">About Me</h1>
+          <p className="text-lg lg:text-xl">
             I&#39;m a Software Engineering{" "}
-            <span style={{ color: "red" }}>Student</span> at Aalborg University
+            <span className="text-red-500">Student</span> at Aalborg University
             in Copenhagen, passionate about programming languages, algorithms,
             and data structures. Beyond coding, I prioritize physical fitness
             through sports like Paddle Tennis and Disc Golf.
           </p>
-          <p>
-            <br />{" "}
+          <p className="text-lg lg:text-xl mt-4">
+            On weekends, I enjoy the vibrant social scene, and instead of books,
+            I dive into Stack Overflow to stay updated.
           </p>
+          
+          {/* Image placed between paragraphs for smaller screens */}
+          <div className="block lg:hidden my-8 flex justify-center">
+            <div className="overflow-hidden rounded-lg transition-transform duration-300 transform hover:scale-105">
+              <Image
+                src="/images/me.png" // Replace with your actual image path
+                alt="About Me"
+                width={500}
+                height={500}
+                className="w-full h-auto"
+              />
+            </div>
+          </div>
 
-          <p style={{ fontSize: "18px" }}>
-            On weekends,
-            <br />I enjoy the vibrant social scene, and instead of books, I dive
-            into Stack Overflow to stay updated.
-          </p>
-          <p>
-            <br />{" "}
-          </p>
-
-          <p style={{ fontSize: "18px" }}>
+          <p className="text-lg lg:text-xl mt-4">
             I thrive on developing games and apps, blending technical skills
             with creativity to innovate and engage users.
           </p>
-          <p>
-            <br />{" "}
-          </p>
-          <p style={{ fontSize: "18px" }}>
-            I excel in team settings,
-            <br />
-            leveraging over four years of experience in C# and other languages
-            to tackle diverse programming challenges.
+          <p className="text-lg lg:text-xl mt-4">
+            I excel in team settings, leveraging over four years of experience
+            in C# and other languages to tackle diverse programming challenges.
           </p>
         </div>
-        <div
-          style={{
-            flex: "1",
-            display: "flex",
-            justifyContent: "center",
-          }}>
-          <div
-            style={{
-              maxWidth: "100%",
-              overflow: "hidden", // Ensure the image doesn't overflow on hover
-              borderRadius: "16px", // Rounded corners
-              transition: "transform 0.3s ease-in-out",
-            }}
-            onMouseOver={(e) =>
-              (e.currentTarget.style.transform = "scale(1.05)")
-            }
-            onMouseOut={(e) => (e.currentTarget.style.transform = "scale(1)")}>
+
+        {/* Image Section - Only on larger screens */}
+        <div className="flex-1 hidden lg:flex justify-center">
+          <div className="overflow-hidden rounded-lg transition-transform duration-300 transform hover:scale-105">
             <Image
               src="/images/me.png" // Replace with your actual image path
               alt="About Me"
-              width={500} // Set appropriate width
-              height={500} // Set appropriate height
-              layout="responsive" // Makes the image responsive
+              width={500}
+              height={500}
+              className="w-full h-auto"
             />
           </div>
         </div>

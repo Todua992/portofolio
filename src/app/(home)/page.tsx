@@ -1,3 +1,5 @@
+'use client';
+
 import { ContactMeForm } from '@/components/page-ui/ContactMe';
 import { ExperienceSection } from '@/components/page-ui/ExperienceSection';
 import { LandingPage } from '@/components/page-ui/LandingPage';

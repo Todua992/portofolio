@@ -8,9 +8,7 @@ import { Button } from '@/components/ui/button';
 import { TypewriterEffectSmooth } from '@/components/ui/typewriter-effect';
 
 import canvasDots from './heroCanvas.js';
-// import canvasDotsBg from './bgCanvas.js';
-
-// canvasDotsBg();
+import canvasDotsBg from './bgCanvas.js';
 canvasDots();
 
 const words = [
@@ -28,7 +26,7 @@ const words = [
 
 const words1 = [
     {
-        text: 'A Software Engineer'
+        text: '\u00A0\u00A0\u00A0\u00A0Software Engineer'
     },
     {
         text: 'Student',
@@ -54,21 +52,21 @@ export function LandingPage() {
         >
             <div className="canvas absolute inset-0">
                 <canvas className="canvas-2 w-full h-full"></canvas>
-            </div>
+            </div>  
             <div style={{ display: 'none' }}>
-  <Image 
-    src="/images/portofolio.png" 
-    alt="Preview"
-    width={500}  // Set appropriate width
-    height={300} // Set appropriate height
-    layout="responsive" // Makes the image responsive
-  />
+<Image 
+  src="/images/portofolio.png" 
+  alt="Preview"
+  width={500}  // Set appropriate width
+  height={300} // Set appropriate height
+  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" // Optional, use for responsive sizing
+/>
 </div>            <div className="relative z-10 text-center">
                 <TypewriterEffectSmooth words={words} />
                 {isDelayed && <TypewriterEffectSmooth words={words1} />}
                 <div className="relative z-10 text-center flex-col space-y-4 md:flex-row md:space-x-4">
                     <Link href="https://drive.google.com/file/d/1oG1p4-PWppW2A8y9oNT03f0P1qaf-Ogv/view?usp=sharing" target="_blank">
-                        <Button>Download CV</Button>
+                        <Button>View CV</Button>
                     </Link>
                     <Link href="#contact-me">
                         <Button variant="secondary">Contact Me</Button>
