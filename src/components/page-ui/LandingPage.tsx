@@ -8,7 +8,6 @@ import { Button } from '@/components/ui/button';
 import { TypewriterEffectSmooth } from '@/components/ui/typewriter-effect';
 
 import canvasDots from './heroCanvas.js';
-import canvasDotsBg from './bgCanvas.js';
 canvasDots();
 
 const words = [
