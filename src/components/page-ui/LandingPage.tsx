@@ -33,15 +33,6 @@ const words1 = [
         className: 'text-red-500 dark:text-red-500'
     }
 ];
-const checkForCanvas = setInterval(() => {
-    const canvas = document.querySelector('canvas');
-    if(canvas) {
-        canvasDots();
-      console.log("Canvas found:", canvas);
-      // Perform operations with the canvas here
-      clearInterval(checkForCanvas); // Stop checking once the canvas is found
-    }
-  }, 100);
 
 export function LandingPage() {
     
@@ -54,6 +45,47 @@ export function LandingPage() {
 
         return () => clearTimeout(timer); // Clean up the timer
     }, []);
+
+    useEffect(() => {
+        // Ensure this only runs on the client side
+        if (typeof window !== 'undefined' && typeof document !== 'undefined') {
+            let intervalId: NodeJS.Timeout | null = null;
+
+            const initCanvas = () => {
+                const canvasElement = document.querySelector('canvas.canvas-2');
+                if (canvasElement) {
+                    canvasDots();
+                    if (intervalId) {
+                        clearInterval(intervalId);
+                        intervalId = null; 
+                    }
+                }
+            };
+
+            // Attempt to initialize immediately
+            initCanvas();
+
+            // If canvas is not found, set an interval to check for it
+            if (!document.querySelector('canvas.canvas-2')) {
+                intervalId = setInterval(initCanvas, 100);
+            }
+
+            return () => {
+                if (intervalId) {
+                    clearInterval(intervalId);
+                }
+                // Placeholder for canvasDots cleanup, if it becomes available
+                // e.g., if canvasDots returned a cleanup function:
+                // if (typeof canvasDotsCleanup === 'function') {
+                //     canvasDotsCleanup();
+                // }
+                // Or manual cleanup if heroCanvas.js doesn't provide one:
+                // window.onmousemove = null;
+                // window.onresize = null;
+                // Potentially clear any interval set by canvasDots itself if possible
+            };
+        }
+    }, []); // Empty dependency array ensures it runs once on mount
 
     return (
         <div

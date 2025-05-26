@@ -1,6 +1,7 @@
 'use client';
 import { GitHubLogoIcon, InstagramLogoIcon, LinkBreak2Icon, LinkNone2Icon, LinkedInLogoIcon, TwitterLogoIcon, VercelLogoIcon } from '@radix-ui/react-icons';
 import React, { useState } from 'react';
+import dynamic from 'next/dynamic';
 
 import { ModeToggle } from '@/components/page-ui/ModeToggle';
 import { HoveredLink, Menu, MenuItem } from '@/components/ui/navbar-menu';
@@ -8,15 +9,8 @@ import { cn } from '@/lib/utils';
 import { Globe, Globe2, Globe2Icon, GlobeIcon, GlobeLock, Link2Icon, LucideGlobe, LucideGlobe2, Shield, ShieldEllipsisIcon, ShieldIcon } from 'lucide-react';
 import { FaGlobe } from 'react-icons/fa';
 
-export function Navbar() {
-    return (
-        <div className="relative flex w-full items-center justify-center">
-            <NavbarComponent className="top-2" />
-        </div>
-    );
-}
-
-function NavbarComponent({ className }: { className?: string }) {
+// Define NavbarComponent as a function expression assignable to a const
+const NavbarComponent = ({ className }: { className?: string }) => {
     const [active, setActive] = useState<string | null>(null);
     return (
         <div className={cn('fixed top-10 inset-x-0 max-w-2xl mx-auto z-50', className)}>
@@ -50,6 +44,19 @@ function NavbarComponent({ className }: { className?: string }) {
                 </MenuItem>
                 <ModeToggle />
             </Menu>
+        </div>
+    );
+};
+
+const ClientOnlyNavbarComponent = dynamic(() => Promise.resolve(NavbarComponent), {
+    ssr: false,
+    loading: () => <div style={{ height: '64px' }} className="top-2 fixed inset-x-0 max-w-2xl mx-auto z-50"></div>, // Placeholder for navbar height (approx 4rem or 64px for top-10 + padding)
+});
+
+export function Navbar() {
+    return (
+        <div className="relative flex w-full items-center justify-center">
+            <ClientOnlyNavbarComponent className="top-2" />
         </div>
     );
 }
