@@ -57,7 +57,7 @@ export function LandingPage() {
                     canvasDots();
                     if (intervalId) {
                         clearInterval(intervalId);
-                        intervalId = null;
+                        intervalId = null; 
                     }
                 }
             };
