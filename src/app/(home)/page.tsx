@@ -10,12 +10,12 @@ import { AboutMeSection } from '@/components/page-ui/AboutMeSection';
 
 export const runtime = "edge";
 
-// Dynamically import ExperienceSection
-const ExperienceSection = dynamic(() => 
-    import('@/components/page-ui/ExperienceSection').then(mod => mod.ExperienceSection), 
-    { 
-        ssr: false, 
-        loading: () => <p>Loading experience...</p> 
+
+const ExperienceSection = dynamic(() =>
+    import('@/components/page-ui/ExperienceSection').then(mod => mod.ExperienceSection),
+    {
+        ssr: false,
+        loading: () => <p>Loading experience...</p>
     }
 );
 
